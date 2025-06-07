@@ -10,6 +10,7 @@ import {
   Linking,
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import ProjectCard from "./src/components/ProjectCard";
 
 export default function App() {
   const name = "Reza Fauzi Augusdi";
@@ -66,6 +67,33 @@ export default function App() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
+
+            <Text style={{ fontWeight: "bold", fontSize: 18, marginTop: 20 }}>
+              Projects
+            </Text>
+
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ gap: 10, padding: 10 }}
+            >
+              <ProjectCard
+                name="Todo App"
+                image={require("./assets/projects/project1.jpeg")}
+              />
+              <ProjectCard
+                name="Todo App 2"
+                image={require("./assets/projects/project2.jpeg")}
+              />
+              <ProjectCard
+                name="Todo App 3"
+                image={require("./assets/projects/project3.jpeg")}
+              />
+              <ProjectCard
+                name="Todo App"
+                image={require("./assets/projects/project1.jpeg")}
+              />
+            </ScrollView>
 
             <StatusBar style="auto" />
           </View>
